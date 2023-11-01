@@ -41,4 +41,7 @@ jspm_packages/
 !/vitest.config.ts
 !/.vscode/settings.json
 *.tsbuildinfo
+!/tsconfig.build.json
+!/tsup.config.json
+package.json.original
 !/.lintstagedrc.yaml

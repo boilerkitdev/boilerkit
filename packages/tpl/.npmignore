@@ -17,4 +17,7 @@ tsconfig.tsbuildinfo
 .gitattributes
 types/**
 vitest.config.ts
+/tsconfig.build.json
+tsup.config.json
+package.json.original
 .lintstagedrc.yaml

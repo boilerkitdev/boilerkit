@@ -11,8 +11,10 @@
     ".projen/tasks.json",
     ".vscode/settings.json",
     "README.md",
+    "tsconfig.build.json",
     "tsconfig.dev.json",
     "tsconfig.json",
+    "tsup.config.json",
     "types/README.md",
     "vitest.config.ts"
   ],

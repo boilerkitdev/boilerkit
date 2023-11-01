@@ -29,6 +29,7 @@ const tplPackage = new TypeScriptPackageProject({
   parent: project,
   name: "@boilerkit/tpl",
   vitest: true,
+  release: true,
 })
 
 const cliPackage = new TypeScriptPackageProject({

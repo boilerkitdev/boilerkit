@@ -14,7 +14,9 @@
 /package.json linguist-generated
 /pnpm-lock.yaml linguist-generated
 /README.md linguist-generated
+/tsconfig.build.json linguist-generated
 /tsconfig.dev.json linguist-generated
 /tsconfig.json linguist-generated
+/tsup.config.json linguist-generated
 /types/README.md linguist-generated
 /vitest.config.ts linguist-generated

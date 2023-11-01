@@ -27,6 +27,9 @@
       "steps": [
         {
           "exec": "tsc --build"
+        },
+        {
+          "exec": "tsup --config=\"tsup.config.json\""
         }
       ]
     },
@@ -69,15 +72,42 @@
     },
     "package": {
       "name": "package",
-      "description": "Creates the distribution package"
+      "description": "Creates the distribution package",
+      "steps": [
+        {
+          "exec": "publint run --strict"
+        },
+        {
+          "spawn": "test:attw"
+        }
+      ]
     },
     "post-compile": {
       "name": "post-compile",
       "description": "Runs after successful compilation"
     },
+    "postpack": {
+      "name": "postpack",
+      "steps": [
+        {
+          "exec": "mv -f package.json.original package.json"
+        }
+      ]
+    },
     "pre-compile": {
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
+    },
+    "prepack": {
+      "name": "prepack",
+      "steps": [
+        {
+          "exec": "cp package.json package.json.original"
+        },
+        {
+          "exec": "clear-package-json package.json -o package.json --fields \"//\""
+        }
+      ]
     },
     "test": {
       "name": "test",
@@ -88,6 +118,20 @@
         },
         {
           "exec": "vitest run --update"
+        }
+      ]
+    },
+    "test:attw": {
+      "name": "test:attw",
+      "env": {
+        "PACK_DESTINATION": "$(mktemp -d)"
+      },
+      "steps": [
+        {
+          "exec": "npm pack --pack-destination=$PACK_DESTINATION"
+        },
+        {
+          "exec": "attw $PACK_DESTINATION/*.tgz"
         }
       ]
     },
