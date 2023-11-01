@@ -2,7 +2,7 @@
 
 # @boilerkit/tpl
 
-## Installation
+### Installation
 
 ```sh
 pnpm add @boilerkit/tpl
@@ -15,3 +15,7 @@ npm install @boilerkit/tpl
 ```sh
 yarn add @boilerkit/tpl
 ```
+
+## Usage
+
+Foo bar
