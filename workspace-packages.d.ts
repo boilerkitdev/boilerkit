@@ -2,5 +2,6 @@
 import type { ProjenTypeScriptWorkspacePackages } from '@scaleleap/projen-project-typescript'
 declare module '@scaleleap/projen-project-typescript' {
   interface ProjenTypeScriptWorkspacePackages {
+    "@boilerkit/tpl": 1;
   }
 }

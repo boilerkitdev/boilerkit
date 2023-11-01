@@ -9,7 +9,8 @@
     "dist": true,
     "pnpm-lock.yaml": true,
     "lib": true,
-    "*.tsbuildinfo": true
+    "*.tsbuildinfo": true,
+    "packages/tpl": true
   },
   "search.exclude": {
     "node_modules": true,

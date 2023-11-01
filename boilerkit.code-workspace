@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "@boilerkit/tpl",
+      "path": "packages/tpl"
+    },
+    {
       "name": "boilerkit 🌱",
       "path": "."
     }
