@@ -39,6 +39,8 @@ jobs:
         run: pnpm i --frozen-lockfile
       - name: build
         run: pnpm --silent dlx projen build
+      - name: Build Workspace
+        run: pnpm --silent dlx projen build:workspace
       - name: Find mutations
         id: self_mutation
         run: |-

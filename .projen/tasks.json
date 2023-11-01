@@ -24,6 +24,18 @@
         }
       ]
     },
+    "build:workspace": {
+      "name": "build:workspace",
+      "description": "Build the entire workspace, including the root project.",
+      "env": {
+        "NPM_CONFIG_INCLUDE_WORKSPACE_ROOT": "true"
+      },
+      "steps": [
+        {
+          "exec": "pnpm run --if-present --recursive --aggregate-output --reporter=append-only build"
+        }
+      ]
+    },
     "ca:login": {
       "name": "ca:login",
       "requiredEnv": [

@@ -51,6 +51,7 @@ packages/*/cdk.out/
 apps/*/lib/
 apps/*/dist/
 apps/*/cdk.out/
+!/pnpm-workspace.yaml
 !/workspace-packages.d.ts
 !/boilerkit.code-workspace
 !/.lintstagedrc.yaml

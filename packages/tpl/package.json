@@ -27,7 +27,6 @@
     "projen": "0.76.15",
     "typescript": "^5.2.2"
   },
-  "pnpm": {},
   "main": "lib/index.js",
   "license": "UNLICENSED",
   "version": "0.0.0",

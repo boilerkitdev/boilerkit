@@ -4,79 +4,166 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-devDependencies:
-  '@scaleleap/projen-pnpm-workspace':
-    specifier: link:../projen/packages/projen-pnpm-workspace
-    version: link:../projen/packages/projen-pnpm-workspace
-  '@scaleleap/projen-project-typescript':
-    specifier: link:../projen/packages/projen-project-typescript
-    version: link:../projen/packages/projen-project-typescript
-  '@types/eslint-config-prettier':
-    specifier: ^6.11.2
-    version: 6.11.2
-  '@types/eslint-plugin-prettier':
-    specifier: ^3.1.2
-    version: 3.1.2
-  '@types/lint-staged':
-    specifier: ^13.2.1
-    version: 13.2.1
-  '@types/node':
-    specifier: ^16
-    version: 16.18.60
-  '@typescript-eslint/eslint-plugin':
-    specifier: ^6.5.0
-    version: 6.9.1(@typescript-eslint/parser@6.9.1)(eslint@8.52.0)(typescript@5.2.2)
-  '@typescript-eslint/parser':
-    specifier: ^6.5.0
-    version: 6.9.1(eslint@8.52.0)(typescript@5.2.2)
-  constructs:
-    specifier: 10.3.0
-    version: 10.3.0
-  eslint:
-    specifier: ^8
-    version: 8.52.0
-  eslint-config-prettier:
-    specifier: ^9.0.0
-    version: 9.0.0(eslint@8.52.0)
-  eslint-import-resolver-node:
-    specifier: ^0.3.9
-    version: 0.3.9
-  eslint-import-resolver-typescript:
-    specifier: ^3.6.1
-    version: 3.6.1(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.52.0)
-  eslint-plugin-import:
-    specifier: ^2.29.0
-    version: 2.29.0(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.52.0)
-  eslint-plugin-jsdoc:
-    specifier: ^46.8.2
-    version: 46.8.2(eslint@8.52.0)
-  eslint-plugin-prettier:
-    specifier: ^5.0.1
-    version: 5.0.1(eslint-config-prettier@9.0.0)(eslint@8.52.0)(prettier@3.0.3)
-  eslint-plugin-regexp:
-    specifier: ^2.1.1
-    version: 2.1.1(eslint@8.52.0)
-  eslint-plugin-simple-import-sort:
-    specifier: ^10.0.0
-    version: 10.0.0(eslint@8.52.0)
-  lint-staged:
-    specifier: ^15.0.2
-    version: 15.0.2
-  markdownlint-cli:
-    specifier: ^0.37.0
-    version: 0.37.0
-  prettier:
-    specifier: ^3.0.3
-    version: 3.0.3
-  projen:
-    specifier: 0.76.15
-    version: 0.76.15(constructs@10.3.0)
-  tsx:
-    specifier: ^3.14.0
-    version: 3.14.0
-  typescript:
-    specifier: ^5.2.2
-    version: 5.2.2
+importers:
+
+  .:
+    devDependencies:
+      '@scaleleap/projen-pnpm-workspace':
+        specifier: link:../projen/packages/projen-pnpm-workspace
+        version: link:../projen/packages/projen-pnpm-workspace
+      '@scaleleap/projen-project-typescript':
+        specifier: link:../projen/packages/projen-project-typescript
+        version: link:../projen/packages/projen-project-typescript
+      '@types/eslint-config-prettier':
+        specifier: ^6.11.2
+        version: 6.11.2
+      '@types/eslint-plugin-prettier':
+        specifier: ^3.1.2
+        version: 3.1.2
+      '@types/lint-staged':
+        specifier: ^13.2.1
+        version: 13.2.1
+      '@types/node':
+        specifier: ^16
+        version: 16.18.60
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.5.0
+        version: 6.9.1(@typescript-eslint/parser@6.9.1)(eslint@8.52.0)(typescript@5.2.2)
+      '@typescript-eslint/parser':
+        specifier: ^6.5.0
+        version: 6.9.1(eslint@8.52.0)(typescript@5.2.2)
+      constructs:
+        specifier: 10.3.0
+        version: 10.3.0
+      eslint:
+        specifier: ^8
+        version: 8.52.0
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.0.0(eslint@8.52.0)
+      eslint-import-resolver-node:
+        specifier: ^0.3.9
+        version: 0.3.9
+      eslint-import-resolver-typescript:
+        specifier: ^3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.52.0)
+      eslint-plugin-import:
+        specifier: ^2.29.0
+        version: 2.29.0(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.52.0)
+      eslint-plugin-jsdoc:
+        specifier: ^46.8.2
+        version: 46.8.2(eslint@8.52.0)
+      eslint-plugin-prettier:
+        specifier: ^5.0.1
+        version: 5.0.1(eslint-config-prettier@9.0.0)(eslint@8.52.0)(prettier@3.0.3)
+      eslint-plugin-regexp:
+        specifier: ^2.1.1
+        version: 2.1.1(eslint@8.52.0)
+      eslint-plugin-simple-import-sort:
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@8.52.0)
+      lint-staged:
+        specifier: ^15.0.2
+        version: 15.0.2
+      markdownlint-cli:
+        specifier: ^0.37.0
+        version: 0.37.0
+      prettier:
+        specifier: ^3.0.3
+        version: 3.0.3
+      projen:
+        specifier: 0.76.15
+        version: 0.76.15(constructs@10.3.0)
+      tsx:
+        specifier: ^3.14.0
+        version: 3.14.0
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
+  packages/cli:
+    devDependencies:
+      '@types/node':
+        specifier: ^16
+        version: 16.18.60
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.5.0
+        version: 6.9.1(@typescript-eslint/parser@6.9.1)(eslint@8.52.0)(typescript@5.2.2)
+      '@typescript-eslint/parser':
+        specifier: ^6.5.0
+        version: 6.9.1(eslint@8.52.0)(typescript@5.2.2)
+      constructs:
+        specifier: 10.3.0
+        version: 10.3.0
+      eslint:
+        specifier: ^8
+        version: 8.52.0
+      eslint-import-resolver-node:
+        specifier: ^0.3.9
+        version: 0.3.9
+      eslint-import-resolver-typescript:
+        specifier: ^3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.52.0)
+      eslint-plugin-import:
+        specifier: ^2.29.0
+        version: 2.29.0(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.52.0)
+      eslint-plugin-jsdoc:
+        specifier: ^46.8.2
+        version: 46.8.2(eslint@8.52.0)
+      eslint-plugin-regexp:
+        specifier: ^2.1.1
+        version: 2.1.1(eslint@8.52.0)
+      eslint-plugin-simple-import-sort:
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@8.52.0)
+      projen:
+        specifier: 0.76.15
+        version: 0.76.15(constructs@10.3.0)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
+  packages/tpl:
+    devDependencies:
+      '@types/node':
+        specifier: ^16
+        version: 16.18.60
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.5.0
+        version: 6.9.1(@typescript-eslint/parser@6.9.1)(eslint@8.52.0)(typescript@5.2.2)
+      '@typescript-eslint/parser':
+        specifier: ^6.5.0
+        version: 6.9.1(eslint@8.52.0)(typescript@5.2.2)
+      constructs:
+        specifier: 10.3.0
+        version: 10.3.0
+      eslint:
+        specifier: ^8
+        version: 8.52.0
+      eslint-import-resolver-node:
+        specifier: ^0.3.9
+        version: 0.3.9
+      eslint-import-resolver-typescript:
+        specifier: ^3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.52.0)
+      eslint-plugin-import:
+        specifier: ^2.29.0
+        version: 2.29.0(@typescript-eslint/parser@6.9.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.52.0)
+      eslint-plugin-jsdoc:
+        specifier: ^46.8.2
+        version: 46.8.2(eslint@8.52.0)
+      eslint-plugin-regexp:
+        specifier: ^2.1.1
+        version: 2.1.1(eslint@8.52.0)
+      eslint-plugin-simple-import-sort:
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@8.52.0)
+      projen:
+        specifier: 0.76.15
+        version: 0.76.15(constructs@10.3.0)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
 
 packages:
 

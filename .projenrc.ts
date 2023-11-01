@@ -2,6 +2,7 @@ import {
   TypeScriptWorkspaceProject,
   TypeScriptPackageProject,
 } from "@scaleleap/projen-project-typescript"
+import { PnpmWorkspace } from "@scaleleap/projen-pnpm-workspace"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
 
@@ -21,6 +22,8 @@ const project = new TypeScriptWorkspaceProject({
     },
   },
 })
+
+new PnpmWorkspace(project)
 
 const tplPackage = new TypeScriptPackageProject({
   parent: project,

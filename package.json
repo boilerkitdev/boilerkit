@@ -2,6 +2,7 @@
   "name": "boilerkit",
   "scripts": {
     "build": "pnpm --silent dlx projen build",
+    "build:workspace": "pnpm --silent dlx projen build:workspace",
     "ca:login": "pnpm --silent dlx projen ca:login",
     "clobber": "pnpm --silent dlx projen clobber",
     "compile": "pnpm --silent dlx projen compile",
