@@ -1,0 +1,193 @@
+{
+  "tasks": {
+    "build": {
+      "name": "build",
+      "description": "Full release build",
+      "steps": [
+        {
+          "spawn": "default"
+        },
+        {
+          "spawn": "pre-compile"
+        },
+        {
+          "spawn": "compile"
+        },
+        {
+          "spawn": "post-compile"
+        },
+        {
+          "spawn": "test"
+        },
+        {
+          "spawn": "package"
+        }
+      ]
+    },
+    "ca:login": {
+      "name": "ca:login",
+      "requiredEnv": [
+        "AWS_ACCESS_KEY_ID",
+        "AWS_SECRET_ACCESS_KEY"
+      ],
+      "steps": [
+        {
+          "exec": "which aws"
+        },
+        {
+          "exec": "npm config set @scaleleap:registry https://scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/; CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain scaleleap --region us-east-1 --domain-owner 848930331875 --query authorizationToken --output text); npm config set //scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/:_authToken=$CODEARTIFACT_AUTH_TOKEN; npm config set //scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/:always-auth=true"
+        }
+      ]
+    },
+    "clobber": {
+      "name": "clobber",
+      "description": "hard resets to HEAD of origin and cleans the local repo",
+      "env": {
+        "BRANCH": "$(git branch --show-current)"
+      },
+      "steps": [
+        {
+          "exec": "git checkout -b scratch",
+          "name": "save current HEAD in \"scratch\" branch"
+        },
+        {
+          "exec": "git checkout $BRANCH"
+        },
+        {
+          "exec": "git fetch origin",
+          "name": "fetch latest changes from origin"
+        },
+        {
+          "exec": "git reset --hard origin/$BRANCH",
+          "name": "hard reset to origin commit"
+        },
+        {
+          "exec": "git clean -fdx",
+          "name": "clean all untracked files"
+        },
+        {
+          "say": "ready to rock! (unpushed commits are under the \"scratch\" branch)"
+        }
+      ],
+      "condition": "git diff --exit-code > /dev/null"
+    },
+    "compile": {
+      "name": "compile",
+      "description": "Only compile",
+      "steps": [
+        {
+          "exec": "tsc --build"
+        }
+      ]
+    },
+    "default": {
+      "name": "default",
+      "description": "Synthesize project files",
+      "steps": [
+        {
+          "exec": "pnpm exec tsx .projenrc.ts"
+        },
+        {
+          "exec": "git config merge.\"pnpm-merge-driver\".name \"Automatically merge pnpm lockfiles\""
+        },
+        {
+          "exec": "git config merge.\"pnpm-merge-driver\".driver \"pnpm install --silent --prefer-offline --lockfile-only --ignore-scripts\""
+        }
+      ]
+    },
+    "eject": {
+      "name": "eject",
+      "description": "Remove projen from the project",
+      "env": {
+        "PROJEN_EJECTING": "true"
+      },
+      "steps": [
+        {
+          "spawn": "default"
+        }
+      ]
+    },
+    "eslint": {
+      "name": "eslint",
+      "description": "Runs eslint against the codebase",
+      "steps": [
+        {
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools projenrc .projenrc.ts"
+        }
+      ]
+    },
+    "install": {
+      "name": "install",
+      "description": "Install project dependencies and update lockfile (non-frozen)",
+      "steps": [
+        {
+          "exec": "pnpm i --no-frozen-lockfile"
+        }
+      ]
+    },
+    "install:ci": {
+      "name": "install:ci",
+      "description": "Install project dependencies using frozen lockfile",
+      "steps": [
+        {
+          "exec": "pnpm i --frozen-lockfile"
+        }
+      ]
+    },
+    "lint-staged": {
+      "name": "lint-staged",
+      "description": "Run linters against staged git files",
+      "steps": [
+        {
+          "exec": "lint-staged"
+        }
+      ]
+    },
+    "markdownlint": {
+      "name": "markdownlint",
+      "description": "Lints markdown files.",
+      "steps": [
+        {
+          "exec": "markdownlint --fix --config=.markdownlint.json --ignore-path=.markdownlintignore \"**/*.md\""
+        }
+      ]
+    },
+    "package": {
+      "name": "package",
+      "description": "Creates the distribution package"
+    },
+    "post-compile": {
+      "name": "post-compile",
+      "description": "Runs after successful compilation"
+    },
+    "pre-compile": {
+      "name": "pre-compile",
+      "description": "Prepare the project for compilation"
+    },
+    "test": {
+      "name": "test",
+      "description": "Run tests",
+      "steps": [
+        {
+          "spawn": "eslint"
+        },
+        {
+          "spawn": "markdownlint"
+        }
+      ]
+    },
+    "watch": {
+      "name": "watch",
+      "description": "Watch & compile in the background",
+      "steps": [
+        {
+          "exec": "tsc --build -w"
+        }
+      ]
+    }
+  },
+  "env": {
+    "PATH": "$(pnpm -c exec \"node --print process.env.PATH\")"
+  },
+  "//": "~~ Generated by projen. To modify, edit .projenrc.ts and run \"pnpm --silent dlx projen\"."
+}
