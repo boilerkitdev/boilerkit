@@ -33,7 +33,10 @@
     ],
     "incremental": true,
     "tsBuildInfoFile": "tsconfig-dev.tsbuildinfo",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "composite": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true
   },
   "include": [
     ".projenrc.js",

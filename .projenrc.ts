@@ -32,6 +32,7 @@ const tplPackage = new TypeScriptPackageProject({
 
 const cliPackage = new TypeScriptPackageProject({
   parent: project,
+  deps: ["@boilerkit/tpl"],
   name: "@boilerkit/cli",
 })
 

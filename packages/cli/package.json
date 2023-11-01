@@ -27,6 +27,9 @@
     "projen": "0.76.15",
     "typescript": "^5.2.2"
   },
+  "dependencies": {
+    "@boilerkit/tpl": "workspace:*"
+  },
   "main": "lib/index.js",
   "license": "UNLICENSED",
   "version": "0.0.0",

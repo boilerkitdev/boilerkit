@@ -33,6 +33,14 @@
     "types": [
       "node"
     ],
+    "paths": {
+      "@boilerkit/tpl": [
+        "../tpl/src/index.ts"
+      ],
+      "@boilerkit/tpl/*": [
+        "../tpl/src/*"
+      ]
+    },
     "incremental": true,
     "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "skipLibCheck": true
@@ -40,5 +48,10 @@
   "include": [
     "src/**/*.ts"
   ],
-  "exclude": []
+  "exclude": [],
+  "references": [
+    {
+      "path": "../tpl"
+    }
+  ]
 }

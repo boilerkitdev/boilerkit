@@ -82,6 +82,10 @@ importers:
         version: 5.2.2
 
   packages/cli:
+    dependencies:
+      '@boilerkit/tpl':
+        specifier: workspace:*
+        version: link:../tpl
     devDependencies:
       '@types/node':
         specifier: ^16
