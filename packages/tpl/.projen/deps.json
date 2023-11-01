@@ -45,6 +45,10 @@
       "type": "build"
     },
     {
+      "name": "eslint-plugin-vitest",
+      "type": "build"
+    },
+    {
       "name": "eslint",
       "version": "^8",
       "type": "build"
@@ -56,6 +60,14 @@
     },
     {
       "name": "typescript",
+      "type": "build"
+    },
+    {
+      "name": "vite-tsconfig-paths",
+      "type": "build"
+    },
+    {
+      "name": "vitest",
       "type": "build"
     }
   ],

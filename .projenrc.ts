@@ -28,6 +28,7 @@ new PnpmWorkspace(project)
 const tplPackage = new TypeScriptPackageProject({
   parent: project,
   name: "@boilerkit/tpl",
+  vitest: true,
 })
 
 const cliPackage = new TypeScriptPackageProject({

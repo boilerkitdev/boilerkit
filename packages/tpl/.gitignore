@@ -38,6 +38,7 @@ jspm_packages/
 !/.eslintrc.json
 !/types/README.md
 !/README.md
+!/vitest.config.ts
 !/.vscode/settings.json
 *.tsbuildinfo
 !/.lintstagedrc.yaml

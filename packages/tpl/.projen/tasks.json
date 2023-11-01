@@ -85,6 +85,18 @@
       "steps": [
         {
           "spawn": "eslint"
+        },
+        {
+          "exec": "vitest run --update"
+        }
+      ]
+    },
+    "test:watch": {
+      "name": "test:watch",
+      "description": "Run Vitest in watch mode",
+      "steps": [
+        {
+          "exec": "vitest watch"
         }
       ]
     },
