@@ -10,7 +10,10 @@ const scopedProjen = (name: string) =>
 
 const project = new TypeScriptWorkspaceProject({
   name: "boilerkit",
-  devDeps: [scopedProjen("projen-project-typescript")],
+  devDeps: [
+    scopedProjen("projen-project-typescript"),
+    scopedProjen("projen-pnpm-workspace"),
+  ],
   prettier: true,
   prettierOptions: {
     settings: {

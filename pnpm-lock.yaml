@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@scaleleap/projen-pnpm-workspace':
+    specifier: link:../projen/packages/projen-pnpm-workspace
+    version: link:../projen/packages/projen-pnpm-workspace
   '@scaleleap/projen-project-typescript':
     specifier: link:../projen/packages/projen-project-typescript
     version: link:../projen/packages/projen-project-typescript

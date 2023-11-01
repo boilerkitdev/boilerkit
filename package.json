@@ -18,6 +18,7 @@
     "projen": "pnpm --silent dlx projen"
   },
   "devDependencies": {
+    "@scaleleap/projen-pnpm-workspace": "link:../projen/packages/projen-pnpm-workspace",
     "@scaleleap/projen-project-typescript": "link:../projen/packages/projen-project-typescript",
     "@types/eslint-config-prettier": "^6.11.2",
     "@types/eslint-plugin-prettier": "^3.1.2",

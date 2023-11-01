@@ -1,6 +1,11 @@
 {
   "dependencies": [
     {
+      "name": "@scaleleap/projen-pnpm-workspace",
+      "version": "link:../projen/packages/projen-pnpm-workspace",
+      "type": "build"
+    },
+    {
       "name": "@scaleleap/projen-project-typescript",
       "version": "link:../projen/packages/projen-project-typescript",
       "type": "build"
