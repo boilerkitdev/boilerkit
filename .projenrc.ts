@@ -24,4 +24,9 @@ const tplPackage = new TypeScriptPackageProject({
   name: "@boilerkit/tpl",
 })
 
+const cliPackage = new TypeScriptPackageProject({
+  parent: project,
+  name: "@boilerkit/cli",
+})
+
 project.synth()

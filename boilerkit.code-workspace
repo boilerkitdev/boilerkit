@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "@boilerkit/cli",
+      "path": "packages/cli"
+    },
+    {
       "name": "@boilerkit/tpl",
       "path": "packages/tpl"
     },
