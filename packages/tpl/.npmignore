@@ -14,6 +14,8 @@ dist
 /.projenrc.js
 tsconfig.tsbuildinfo
 /.eslintrc.json
+.node-version
+.nvmrc
 .gitattributes
 types/**
 vitest.config.ts

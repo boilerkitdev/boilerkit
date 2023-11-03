@@ -38,6 +38,8 @@ jspm_packages/
 /lib
 /dist/
 !/.eslintrc.json
+!/.node-version
+!/.nvmrc
 !/types/README.md
 !/README.md
 !/.markdownlint.json

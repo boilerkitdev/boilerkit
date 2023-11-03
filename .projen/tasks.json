@@ -47,7 +47,7 @@
           "exec": "which aws"
         },
         {
-          "exec": "npm config set @scaleleap:registry https://scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/; CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain scaleleap --region us-east-1 --domain-owner 848930331875 --query authorizationToken --output text); npm config set //scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/:_authToken=$CODEARTIFACT_AUTH_TOKEN; npm config set //scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/:always-auth=true"
+          "exec": "npm config set @scaleleap:registry https://scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/; CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain scaleleap --region us-east-1 --domain-owner 848930331875 --query authorizationToken --output text); npm config set //scaleleap-848930331875.d.codeartifact.us-east-1.amazonaws.com/npm/master/:_authToken=$CODEARTIFACT_AUTH_TOKEN"
         }
       ]
     },
