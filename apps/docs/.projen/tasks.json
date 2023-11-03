@@ -27,6 +27,9 @@
       "steps": [
         {
           "exec": "tsc --build"
+        },
+        {
+          "exec": "vite build"
         }
       ]
     },
@@ -37,6 +40,14 @@
         {
           "exec": "pnpm --silent dlx projen default",
           "cwd": "../.."
+        }
+      ]
+    },
+    "dev": {
+      "name": "dev",
+      "steps": [
+        {
+          "exec": "vite"
         }
       ]
     },
@@ -78,6 +89,14 @@
     "pre-compile": {
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
+    },
+    "preview": {
+      "name": "preview",
+      "steps": [
+        {
+          "exec": "vite preview"
+        }
+      ]
     },
     "test": {
       "name": "test",

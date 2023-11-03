@@ -4,6 +4,7 @@ import {
   TypeScriptAppProject,
 } from "@scaleleap/projen-project-typescript"
 import { PnpmWorkspace } from "@scaleleap/projen-pnpm-workspace"
+import { ProjenReactApp } from "@scaleleap/projen-react"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
 
@@ -15,6 +16,7 @@ const project = new TypeScriptWorkspaceProject({
   devDeps: [
     scopedProjen("projen-project-typescript"),
     scopedProjen("projen-pnpm-workspace"),
+    scopedProjen("projen-react"),
   ],
   prettier: true,
   prettierOptions: {
@@ -30,6 +32,8 @@ const docsApp = new TypeScriptAppProject({
   parent: project,
   name: "docs",
 })
+
+const reactApp = new ProjenReactApp(docsApp, {})
 
 const tplPackage = new TypeScriptPackageProject({
   parent: project,

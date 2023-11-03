@@ -11,9 +11,12 @@
 /.projen/files.json linguist-generated
 /.projen/tasks.json linguist-generated
 /.vscode/settings.json linguist-generated
+/index.html linguist-generated
 /package.json linguist-generated
 /pnpm-lock.yaml linguist-generated
 /README.md linguist-generated
+/src/index.tsx linguist-generated
 /tsconfig.dev.json linguist-generated
 /tsconfig.json linguist-generated
 /types/README.md linguist-generated
+/vite.config.ts linguist-generated

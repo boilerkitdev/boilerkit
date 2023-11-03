@@ -11,6 +11,11 @@
       "type": "build"
     },
     {
+      "name": "@scaleleap/projen-react",
+      "version": "link:../projen/packages/projen-react",
+      "type": "build"
+    },
+    {
       "name": "@types/eslint-config-prettier",
       "type": "build"
     },

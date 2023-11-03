@@ -40,4 +40,7 @@ jspm_packages/
 !/README.md
 !/.vscode/settings.json
 *.tsbuildinfo
+!/vite.config.ts
+!/index.html
+!/src/index.tsx
 !/.lintstagedrc.yaml

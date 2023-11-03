@@ -31,15 +31,22 @@
       "./types"
     ],
     "types": [
-      "node"
+      "node",
+      "react",
+      "react-dom"
     ],
     "incremental": true,
     "tsBuildInfoFile": "tsconfig.tsbuildinfo",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   },
   "include": [
     "src/**/*.ts",
-    "node_modules/@total-typescript/ts-reset/**/*.d.ts"
+    "node_modules/@total-typescript/ts-reset/**/*.d.ts",
+    "src/**/*.tsx",
+    "test/**/*.tsx"
   ],
   "exclude": []
 }

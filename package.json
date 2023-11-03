@@ -21,6 +21,7 @@
   "devDependencies": {
     "@scaleleap/projen-pnpm-workspace": "link:../projen/packages/projen-pnpm-workspace",
     "@scaleleap/projen-project-typescript": "link:../projen/packages/projen-project-typescript",
+    "@scaleleap/projen-react": "link:../projen/packages/projen-react",
     "@types/eslint-config-prettier": "^6.11.2",
     "@types/eslint-plugin-prettier": "^3.1.2",
     "@types/lint-staged": "^13.2.1",

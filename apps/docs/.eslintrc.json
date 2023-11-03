@@ -8,6 +8,7 @@
   "plugins": [
     "@typescript-eslint",
     "import",
+    "react-refresh",
     "simple-import-sort",
     "regexp"
   ],
@@ -19,6 +20,7 @@
   },
   "extends": [
     "plugin:import/typescript",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:@typescript-eslint/strict",
     "plugin:jsdoc/recommended-typescript-error",
@@ -44,7 +46,8 @@
     "*.d.ts",
     "node_modules/",
     "*.generated.ts",
-    "coverage"
+    "coverage",
+    "vite.config.ts"
   ],
   "rules": {
     "indent": [
@@ -197,6 +200,12 @@
           "constructor",
           "method"
         ]
+      }
+    ],
+    "react-refresh/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
       }
     ],
     "@typescript-eslint/no-empty-interface": "off",
