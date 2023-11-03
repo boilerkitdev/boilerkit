@@ -8,6 +8,7 @@
   "plugins": [
     "@typescript-eslint",
     "import",
+    "vitest",
     "simple-import-sort",
     "regexp"
   ],
@@ -19,6 +20,9 @@
   },
   "extends": [
     "plugin:import/typescript",
+    "oclif",
+    "oclif-typescript",
+    "plugin:vitest/all",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:@typescript-eslint/strict",
     "plugin:jsdoc/recommended-typescript-error",
@@ -44,7 +48,9 @@
     "*.d.ts",
     "node_modules/",
     "*.generated.ts",
-    "coverage"
+    "coverage",
+    "src/index.ts",
+    "vitest.config.ts"
   ],
   "rules": {
     "indent": [
@@ -142,7 +148,9 @@
       {
         "devDependencies": [
           "**/test/**",
-          "**/build-tools/**"
+          "**/build-tools/**",
+          "**/*.test.ts",
+          "**/*.test.tsx"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
@@ -197,6 +205,20 @@
           "constructor",
           "method"
         ]
+      }
+    ],
+    "vitest/prefer-to-be-truthy": "off",
+    "vitest/prefer-to-be-falsy": "off",
+    "vitest/require-hook": "off",
+    "vitest/no-hooks": "off",
+    "vitest/no-conditional-tests": "off",
+    "vitest/no-conditional-in-test": "off",
+    "vitest/max-expects": "off",
+    "vitest/consistent-test-it": [
+      "error",
+      {
+        "fn": "it",
+        "withinDescribe": "it"
       }
     ],
     "@typescript-eslint/no-empty-interface": "off",

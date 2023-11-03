@@ -6,6 +6,7 @@ import {
 import { PnpmWorkspace } from "@scaleleap/projen-pnpm-workspace"
 import { ProjenReactApp } from "@scaleleap/projen-react"
 import { TypeScriptModuleResolution } from "projen/lib/javascript"
+import { OclifCli } from "@scaleleap/projen-oclif"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
 
@@ -70,6 +71,10 @@ const cliPackage = new TypeScriptPackageProject({
   parent: project,
   deps: ["@boilerkit/tpl"],
   name: "@boilerkit/cli",
+})
+
+const oclif = new OclifCli(cliPackage, {
+  executableName: "bk",
 })
 
 project.synth()

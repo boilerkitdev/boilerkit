@@ -1,6 +1,10 @@
 {
   "dependencies": [
     {
+      "name": "@oclif/test",
+      "type": "build"
+    },
+    {
       "name": "@types/node",
       "version": "^16",
       "type": "build"
@@ -16,8 +20,20 @@
       "type": "build"
     },
     {
+      "name": "clean-publish",
+      "type": "build"
+    },
+    {
       "name": "constructs",
       "version": "10.3.0",
+      "type": "build"
+    },
+    {
+      "name": "eslint-config-oclif",
+      "type": "build"
+    },
+    {
+      "name": "eslint-config-oclif-typescript",
       "type": "build"
     },
     {
@@ -45,8 +61,21 @@
       "type": "build"
     },
     {
+      "name": "eslint-plugin-unicorn",
+      "version": "^38",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-vitest",
+      "type": "build"
+    },
+    {
       "name": "eslint",
       "version": "^8",
+      "type": "build"
+    },
+    {
+      "name": "oclif",
       "type": "build"
     },
     {
@@ -55,12 +84,52 @@
       "type": "build"
     },
     {
+      "name": "publint",
+      "type": "build"
+    },
+    {
+      "name": "shx",
+      "type": "build"
+    },
+    {
+      "name": "tsup",
+      "type": "build"
+    },
+    {
       "name": "typescript",
+      "type": "build"
+    },
+    {
+      "name": "vite-tsconfig-paths",
+      "type": "build"
+    },
+    {
+      "name": "vitest",
       "type": "build"
     },
     {
       "name": "@boilerkit/tpl",
       "version": "workspace:*",
+      "type": "runtime"
+    },
+    {
+      "name": "@oclif/core",
+      "type": "runtime"
+    },
+    {
+      "name": "@oclif/plugin-autocomplete",
+      "type": "runtime"
+    },
+    {
+      "name": "@oclif/plugin-help",
+      "type": "runtime"
+    },
+    {
+      "name": "@oclif/plugin-plugins",
+      "type": "runtime"
+    },
+    {
+      "name": "@oclif/plugin-version",
       "type": "runtime"
     }
   ],

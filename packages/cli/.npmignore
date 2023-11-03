@@ -16,4 +16,10 @@ tsconfig.tsbuildinfo
 /.eslintrc.json
 .gitattributes
 types/**
+CLI.template.md
+README.md.bak
+vitest.config.ts
+/tsconfig.build.json
+tsup.config.json
+package.json.original
 .lintstagedrc.yaml

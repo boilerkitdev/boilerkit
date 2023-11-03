@@ -27,6 +27,9 @@
       "steps": [
         {
           "exec": "tsc --build"
+        },
+        {
+          "exec": "tsup --config=\"tsup.config.json\""
         }
       ]
     },
@@ -37,6 +40,20 @@
         {
           "exec": "pnpm --silent dlx projen default",
           "cwd": "../.."
+        }
+      ]
+    },
+    "dev": {
+      "name": "dev",
+      "description": "An Oclif CLI for development mode.",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "bk"
+      },
+      "steps": [
+        {
+          "exec": "tsx --tsconfig tsconfig.json bin/run.js",
+          "receiveArgs": true
         }
       ]
     },
@@ -67,17 +84,67 @@
         }
       ]
     },
+    "oclif:readme": {
+      "name": "oclif:readme",
+      "description": "Generates a README.md file for the CLI.",
+      "steps": [
+        {
+          "exec": "shx mv README.md README.md.bak"
+        },
+        {
+          "exec": "shx cp CLI.template.md README.md"
+        },
+        {
+          "exec": "oclif readme"
+        },
+        {
+          "exec": "shx mv README.md CLI.md"
+        },
+        {
+          "exec": "shx mv README.md.bak README.md"
+        }
+      ]
+    },
     "package": {
       "name": "package",
-      "description": "Creates the distribution package"
+      "description": "Creates the distribution package",
+      "steps": [
+        {
+          "exec": "publint run --strict"
+        }
+      ]
     },
     "post-compile": {
       "name": "post-compile",
-      "description": "Runs after successful compilation"
+      "description": "Runs after successful compilation",
+      "steps": [
+        {
+          "spawn": "oclif:readme"
+        }
+      ]
+    },
+    "postpack": {
+      "name": "postpack",
+      "steps": [
+        {
+          "exec": "mv -f package.json.original package.json"
+        }
+      ]
     },
     "pre-compile": {
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
+    },
+    "prepack": {
+      "name": "prepack",
+      "steps": [
+        {
+          "exec": "cp package.json package.json.original"
+        },
+        {
+          "exec": "clear-package-json package.json -o package.json --fields \"//\""
+        }
+      ]
     },
     "test": {
       "name": "test",
@@ -85,6 +152,18 @@
       "steps": [
         {
           "spawn": "eslint"
+        },
+        {
+          "exec": "vitest run --update"
+        }
+      ]
+    },
+    "test:watch": {
+      "name": "test:watch",
+      "description": "Run Vitest in watch mode",
+      "steps": [
+        {
+          "exec": "vitest watch"
         }
       ]
     },

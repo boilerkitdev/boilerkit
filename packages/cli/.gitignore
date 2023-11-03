@@ -40,4 +40,12 @@ jspm_packages/
 !/README.md
 !/.vscode/settings.json
 *.tsbuildinfo
+!/bin/run.js
+!/src/index.ts
+!/CLI.template.md
+README.md.bak
+!/vitest.config.ts
+!/tsconfig.build.json
+!/tsup.config.json
+package.json.original
 !/.lintstagedrc.yaml
