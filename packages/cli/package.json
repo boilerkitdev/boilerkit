@@ -36,7 +36,7 @@
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-regexp": "^2.1.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unicorn": "^49",
+    "eslint-plugin-unicorn": "^46.0.1",
     "eslint-plugin-vitest": "^0.3.8",
     "oclif": "^4.0.3",
     "projen": "0.76.15",
