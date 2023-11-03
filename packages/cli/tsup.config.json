@@ -4,7 +4,8 @@
   "watch": false,
   "silent": true,
   "entry": [
-    "src/index.ts"
+    "src/index.ts",
+    "src/commands/foo.ts"
   ],
   "dts": false,
   "tsconfig": "tsconfig.build.json",
