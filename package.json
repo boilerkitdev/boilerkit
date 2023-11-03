@@ -19,6 +19,7 @@
     "projen": "pnpm --silent dlx projen"
   },
   "devDependencies": {
+    "@scaleleap/projen-oclif": "link:../projen/packages/projen-oclif",
     "@scaleleap/projen-pnpm-workspace": "link:../projen/packages/projen-pnpm-workspace",
     "@scaleleap/projen-project-typescript": "link:../projen/packages/projen-project-typescript",
     "@scaleleap/projen-react": "link:../projen/packages/projen-react",

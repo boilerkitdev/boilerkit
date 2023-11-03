@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@scaleleap/projen-oclif':
+        specifier: link:../projen/packages/projen-oclif
+        version: link:../projen/packages/projen-oclif
       '@scaleleap/projen-pnpm-workspace':
         specifier: link:../projen/packages/projen-pnpm-workspace
         version: link:../projen/packages/projen-pnpm-workspace

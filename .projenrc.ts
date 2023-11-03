@@ -18,6 +18,7 @@ const project = new TypeScriptWorkspaceProject({
     scopedProjen("projen-project-typescript"),
     scopedProjen("projen-pnpm-workspace"),
     scopedProjen("projen-react"),
+    scopedProjen("projen-oclif"),
   ],
   prettier: true,
   prettierOptions: {

@@ -1,6 +1,11 @@
 {
   "dependencies": [
     {
+      "name": "@scaleleap/projen-oclif",
+      "version": "link:../projen/packages/projen-oclif",
+      "type": "build"
+    },
+    {
       "name": "@scaleleap/projen-pnpm-workspace",
       "version": "link:../projen/packages/projen-pnpm-workspace",
       "type": "build"
