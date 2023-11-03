@@ -1,12 +1,12 @@
-import {
-  TypeScriptWorkspaceProject,
-  TypeScriptPackageProject,
-  TypeScriptAppProject,
-} from "@scaleleap/projen-project-typescript"
+import { OclifCli } from "@scaleleap/projen-oclif"
 import { PnpmWorkspace } from "@scaleleap/projen-pnpm-workspace"
+import {
+  TypeScriptAppProject,
+  TypeScriptPackageProject,
+  TypeScriptWorkspaceProject,
+} from "@scaleleap/projen-project-typescript"
 import { ProjenReactApp } from "@scaleleap/projen-react"
 import { TypeScriptModuleResolution } from "projen/lib/javascript"
-import { OclifCli } from "@scaleleap/projen-oclif"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
 
@@ -15,6 +15,7 @@ const scopedProjen = (name: string) =>
 
 const project = new TypeScriptWorkspaceProject({
   name: "boilerkit",
+  minNodeVersion: "18.12.1",
   devDeps: [
     scopedProjen("projen-project-typescript"),
     scopedProjen("projen-pnpm-workspace"),
