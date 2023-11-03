@@ -21,12 +21,23 @@
         }
       ]
     },
+    "build:docs": {
+      "name": "build:docs",
+      "steps": [
+        {
+          "exec": "next build"
+        }
+      ]
+    },
     "compile": {
       "name": "compile",
       "description": "Only compile",
       "steps": [
         {
           "exec": "tsc --build"
+        },
+        {
+          "spawn": "build:docs"
         },
         {
           "exec": "vite build"
@@ -48,6 +59,14 @@
       "steps": [
         {
           "exec": "vite"
+        }
+      ]
+    },
+    "dev:docs": {
+      "name": "dev:docs",
+      "steps": [
+        {
+          "exec": "next"
         }
       ]
     },

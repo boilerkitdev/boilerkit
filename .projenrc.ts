@@ -31,6 +31,17 @@ new PnpmWorkspace(project)
 const docsApp = new TypeScriptAppProject({
   parent: project,
   name: "docs",
+  deps: ["next", "nextra", "nextra-theme-docs"],
+})
+
+const buildDocs = docsApp.tasks.addTask("build:docs", {
+  exec: "next build",
+})
+
+docsApp.compileTask.spawn(buildDocs)
+
+docsApp.tasks.addTask("dev:docs", {
+  exec: "next",
 })
 
 const reactApp = new ProjenReactApp(docsApp, {})

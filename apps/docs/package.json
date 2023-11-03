@@ -2,9 +2,11 @@
   "name": "docs",
   "scripts": {
     "build": "pnpm --silent dlx projen build",
+    "build:docs": "pnpm --silent dlx projen build:docs",
     "compile": "pnpm --silent dlx projen compile",
     "default": "pnpm --silent dlx projen default",
     "dev": "pnpm --silent dlx projen dev",
+    "dev:docs": "pnpm --silent dlx projen dev:docs",
     "eslint": "pnpm --silent dlx projen eslint",
     "package": "pnpm --silent dlx projen package",
     "post-compile": "pnpm --silent dlx projen post-compile",
@@ -37,6 +39,9 @@
     "vite": "^4.5.0"
   },
   "dependencies": {
+    "next": "^14.0.1",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

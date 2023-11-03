@@ -87,6 +87,18 @@
       "type": "build"
     },
     {
+      "name": "next",
+      "type": "runtime"
+    },
+    {
+      "name": "nextra",
+      "type": "runtime"
+    },
+    {
+      "name": "nextra-theme-docs",
+      "type": "runtime"
+    },
+    {
       "name": "react",
       "type": "runtime"
     },
