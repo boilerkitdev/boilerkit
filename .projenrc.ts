@@ -73,6 +73,8 @@ const cliPackage = new TypeScriptPackageProject({
   name: "@boilerkit/cli",
 })
 
+cliPackage.package.addField("files", ["lib"])
+
 const oclif = new OclifCli(cliPackage, {
   executableName: "bk",
 })
