@@ -43,4 +43,5 @@ jspm_packages/
 !/vite.config.ts
 !/index.html
 !/src/index.tsx
+.next
 !/.lintstagedrc.yaml

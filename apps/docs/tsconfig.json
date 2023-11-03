@@ -26,6 +26,9 @@
     "strictPropertyInitialization": true,
     "stripInternal": true,
     "target": "ES2019",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
     "typeRoots": [
       "./node_modules/@types",
       "./types"
@@ -38,7 +41,7 @@
     "incremental": true,
     "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "skipLibCheck": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "allowImportingTsExtensions": true,
     "noEmit": true
   },

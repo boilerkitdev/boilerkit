@@ -5,6 +5,7 @@ import {
 } from "@scaleleap/projen-project-typescript"
 import { PnpmWorkspace } from "@scaleleap/projen-pnpm-workspace"
 import { ProjenReactApp } from "@scaleleap/projen-react"
+import { TypeScriptModuleResolution } from "projen/lib/javascript"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
 
@@ -32,6 +33,14 @@ const docsApp = new TypeScriptAppProject({
   parent: project,
   name: "docs",
   deps: ["next", "nextra", "nextra-theme-docs"],
+  tsconfig: {
+    compilerOptions: {
+      // jsx: "preserve",
+      allowJs: true,
+      moduleResolution: TypeScriptModuleResolution.NODE,
+      isolatedModules: true,
+    },
+  },
 })
 
 const buildDocs = docsApp.tasks.addTask("build:docs", {
@@ -45,6 +54,9 @@ docsApp.tasks.addTask("dev:docs", {
 })
 
 const reactApp = new ProjenReactApp(docsApp, {})
+
+docsApp.tsconfig?.file.addOverride("compilerOptions.jsx", "preserve")
+docsApp.gitignore.exclude(".next")
 
 const tplPackage = new TypeScriptPackageProject({
   parent: project,
