@@ -1,6 +1,7 @@
 import {
   TypeScriptWorkspaceProject,
   TypeScriptPackageProject,
+  TypeScriptAppProject,
 } from "@scaleleap/projen-project-typescript"
 import { PnpmWorkspace } from "@scaleleap/projen-pnpm-workspace"
 
@@ -24,6 +25,11 @@ const project = new TypeScriptWorkspaceProject({
 })
 
 new PnpmWorkspace(project)
+
+const docsApp = new TypeScriptAppProject({
+  parent: project,
+  name: "docs",
+})
 
 const tplPackage = new TypeScriptPackageProject({
   parent: project,

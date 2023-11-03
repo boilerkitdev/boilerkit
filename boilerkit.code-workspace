@@ -11,6 +11,10 @@
     {
       "name": "boilerkit 🌱",
       "path": "."
+    },
+    {
+      "name": "docs",
+      "path": "apps/docs"
     }
   ],
   "settings": {},
