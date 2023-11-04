@@ -68,6 +68,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^10.0.0
         version: 10.0.0(eslint@8.52.0)
+      eslint-plugin-unicorn:
+        specifier: ^46.0.1
+        version: 46.0.1(eslint@8.52.0)
       lint-staged:
         specifier: ^15.0.2
         version: 15.0.2
@@ -156,6 +159,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^10.0.0
         version: 10.0.0(eslint@8.52.0)
+      eslint-plugin-unicorn:
+        specifier: ^46.0.1
+        version: 46.0.1(eslint@8.52.0)
       projen:
         specifier: 0.76.15
         version: 0.76.15(constructs@10.3.0)
@@ -307,6 +313,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^10.0.0
         version: 10.0.0(eslint@8.52.0)
+      eslint-plugin-unicorn:
+        specifier: ^46.0.1
+        version: 46.0.1(eslint@8.52.0)
       eslint-plugin-vitest:
         specifier: ^0.3.8
         version: 0.3.8(@typescript-eslint/eslint-plugin@6.9.1)(eslint@8.52.0)(typescript@5.2.2)(vitest@0.34.6)

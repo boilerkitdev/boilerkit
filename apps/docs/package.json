@@ -34,6 +34,7 @@
     "eslint-plugin-react-refresh": "^0.4.4",
     "eslint-plugin-regexp": "^2.1.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unicorn": "^46.0.1",
     "projen": "0.76.15",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"

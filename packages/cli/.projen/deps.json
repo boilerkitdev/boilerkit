@@ -62,7 +62,6 @@
     },
     {
       "name": "eslint-plugin-unicorn",
-      "version": "^46.0.1",
       "type": "build"
     },
     {

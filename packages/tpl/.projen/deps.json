@@ -53,6 +53,10 @@
       "type": "build"
     },
     {
+      "name": "eslint-plugin-unicorn",
+      "type": "build"
+    },
+    {
       "name": "eslint-plugin-vitest",
       "type": "build"
     },
