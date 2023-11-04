@@ -15,7 +15,7 @@ const scopedProjen = (name: string) =>
 
 const project = new TypeScriptWorkspaceProject({
   name: "boilerkit",
-  minNodeVersion: "18.12.1",
+  minNodeVersion: "18.17.0",
   devDeps: [
     scopedProjen("projen-project-typescript"),
     scopedProjen("projen-pnpm-workspace"),

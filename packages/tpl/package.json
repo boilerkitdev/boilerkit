@@ -44,7 +44,7 @@
     "projen": "^0.76.15"
   },
   "engines": {
-    "node": ">= 18.12.1"
+    "node": ">= 18.17.0"
   },
   "main": "./lib/index.js",
   "license": "UNLICENSED",
