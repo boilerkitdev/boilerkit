@@ -74,7 +74,9 @@ const cliPackage = new TypeScriptPackageProject({
   name: "@boilerkit/cli",
 })
 
-cliPackage.package.addField("files", ["lib"])
+// Do not actually need this, becasue Oclif just warns about it in dev mode
+// also opened an issue to discuss this "feature": https://github.com/oclif/core/issues/851
+// cliPackage.package.addField("files", ["lib"])
 
 const oclif = new OclifCli(cliPackage, {
   executableName: "bk",

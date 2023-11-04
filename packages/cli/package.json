@@ -64,9 +64,6 @@
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@8.9.0",
-  "files": [
-    "lib"
-  ],
   "oclif": {
     "bin": "bk",
     "commands": "./lib/commands",
