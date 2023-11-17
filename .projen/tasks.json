@@ -100,12 +100,10 @@
           "exec": "pnpm exec tsx .projenrc.ts"
         },
         {
-          "exec": "git config merge.\"pnpm-merge-driver\".name \"Automatically merge pnpm lockfiles\"",
-          "condition": "git rev-parse --is-inside-work-tree"
+          "exec": "git config merge.\"pnpm-merge-driver\".name \"Automatically merge pnpm lockfiles\""
         },
         {
-          "exec": "git config merge.\"pnpm-merge-driver\".driver \"pnpm install --silent --prefer-offline --lockfile-only --ignore-scripts\"",
-          "condition": "git rev-parse --is-inside-work-tree"
+          "exec": "git config merge.\"pnpm-merge-driver\".driver \"pnpm install --silent --prefer-offline --lockfile-only --ignore-scripts\""
         }
       ]
     },

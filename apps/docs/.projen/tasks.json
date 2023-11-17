@@ -34,13 +34,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "tsc --build"
-        },
-        {
           "spawn": "build:docs"
-        },
-        {
-          "exec": "vite build"
         }
       ]
     },

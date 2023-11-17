@@ -12,7 +12,6 @@
     ".projen/files.json",
     ".projen/tasks.json",
     ".vscode/settings.json",
-    "bin/dev.js",
     "bin/run.js",
     "README.md",
     "src/index.ts",

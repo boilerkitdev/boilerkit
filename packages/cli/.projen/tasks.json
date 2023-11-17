@@ -52,7 +52,7 @@
       },
       "steps": [
         {
-          "exec": "bin/dev.js",
+          "exec": "tsx --tsconfig tsconfig.json bin/run.js",
           "receiveArgs": true
         }
       ]

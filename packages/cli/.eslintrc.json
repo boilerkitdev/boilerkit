@@ -10,8 +10,7 @@
     "import",
     "vitest",
     "simple-import-sort",
-    "regexp",
-    "unicorn"
+    "regexp"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -27,8 +26,7 @@
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:@typescript-eslint/strict",
     "plugin:jsdoc/recommended-typescript-error",
-    "plugin:regexp/recommended",
-    "plugin:unicorn/recommended"
+    "plugin:regexp/recommended"
   ],
   "settings": {
     "import/parsers": {
@@ -348,7 +346,6 @@
             "^util/types$",
             "^v8$",
             "^vm$",
-            "^wasi$",
             "^worker_threads$",
             "^zlib$"
           ],
@@ -369,11 +366,7 @@
     ],
     "simple-import-sort/exports": "error",
     "import/first": "error",
-    "import/newline-after-import": "error",
-    "unicorn/prefer-module": "off",
-    "unicorn/prefer-string-replace-all": "off",
-    "unicorn/no-array-callback-reference": "off",
-    "unicorn/prevent-abbreviations": "off"
+    "import/newline-after-import": "error"
   },
   "overrides": []
 }

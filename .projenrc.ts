@@ -7,6 +7,7 @@ import {
 } from "@scaleleap/projen-project-typescript"
 import { ProjenReactApp } from "@scaleleap/projen-react"
 import { TypeScriptModuleResolution } from "projen/lib/javascript"
+import { web } from "projen"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
 
@@ -32,6 +33,22 @@ const project = new TypeScriptWorkspaceProject({
 
 new PnpmWorkspace(project)
 
+// const docsApp = new web.NextJsTypeScriptProject({
+//   parent: project,
+//   defaultReleaseBranch: "main",
+//   dir
+//   outdir: '',
+//   name: "docs",
+//   deps: ["nextra", "nextra-theme-docs"],
+//   tsconfig: {
+//     compilerOptions: {
+//       // jsx: "preserve",
+//       // allowJs: true,
+//       // moduleResolution: TypeScriptModuleResolution.NODE,
+//       // isolatedModules: true,
+//     },
+//   },
+// })
 const docsApp = new TypeScriptAppProject({
   parent: project,
   name: "docs",
@@ -57,7 +74,11 @@ docsApp.tasks.addTask("dev:docs", {
 })
 
 const reactApp = new ProjenReactApp(docsApp, {})
-
+docsApp.tryRemoveFile("src/index.tsx")
+docsApp.tryRemoveFile("index.html")
+docsApp.tryRemoveFile("vite.config.ts")
+docsApp.compileTask.reset()
+docsApp.compileTask.spawn(buildDocs)
 docsApp.tsconfig?.file.addOverride("compilerOptions.jsx", "preserve")
 docsApp.gitignore.exclude(".next")
 

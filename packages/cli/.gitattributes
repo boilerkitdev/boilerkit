@@ -13,7 +13,6 @@
 /.projen/files.json linguist-generated
 /.projen/tasks.json linguist-generated
 /.vscode/settings.json linguist-generated
-/bin/dev.js linguist-generated
 /bin/run.js linguist-generated
 /CLI.template.md linguist-generated
 /package.json linguist-generated
