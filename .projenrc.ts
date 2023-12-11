@@ -80,8 +80,8 @@ docsApp.compileTask.reset()
 docsApp.compileTask.spawn(buildDocs)
 docsApp.tsconfig?.file.addOverride("compilerOptions.jsx", "preserve")
 docsApp.gitignore.exclude(".next")
-docsApp.eslint?.addExtends('plugin:@next/next/recommended')
-docsApp.addDevDeps('@next/eslint-plugin-next')
+docsApp.eslint?.addExtends("plugin:@next/next/recommended")
+docsApp.addDevDeps("@next/eslint-plugin-next")
 
 new TypeScriptPackageProject({
   parent: project,
