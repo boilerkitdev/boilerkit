@@ -36,16 +36,16 @@ importers:
         specifier: ^18
         version: 18.18.8
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.2.2)
       '@typescript-eslint/parser':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(eslint@8.55.0)(typescript@5.2.2)
       constructs:
         specifier: 10.3.0
         version: 10.3.0
       eslint:
-        specifier: ^8.55.0
+        specifier: ^8
         version: 8.55.0
       eslint-config-prettier:
         specifier: ^9.1.0
@@ -114,6 +114,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: ^14.0.4
+        version: 14.0.4
       '@stylistic/eslint-plugin':
         specifier: ^1.5.1
         version: 1.5.1(eslint@8.55.0)(typescript@5.2.2)
@@ -130,10 +133,10 @@ importers:
         specifier: ^18.2.14
         version: 18.2.14
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.2.2)
       '@typescript-eslint/parser':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(eslint@8.55.0)(typescript@5.2.2)
       '@vitejs/plugin-react':
         specifier: ^4.1.1
@@ -142,7 +145,7 @@ importers:
         specifier: 10.3.0
         version: 10.3.0
       eslint:
-        specifier: ^8.55.0
+        specifier: ^8
         version: 8.55.0
       eslint-import-resolver-node:
         specifier: ^0.3.9
@@ -218,10 +221,10 @@ importers:
         specifier: ^18
         version: 18.18.8
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.2.2)
       '@typescript-eslint/parser':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(eslint@8.55.0)(typescript@5.2.2)
       clean-publish:
         specifier: ^4.2.0
@@ -230,7 +233,7 @@ importers:
         specifier: 10.3.0
         version: 10.3.0
       eslint:
-        specifier: ^8.55.0
+        specifier: ^8
         version: 8.55.0
       eslint-config-oclif:
         specifier: ^5.0.0
@@ -314,10 +317,10 @@ importers:
         specifier: ^18
         version: 18.18.8
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.2.2)
       '@typescript-eslint/parser':
-        specifier: ^6.13.2
+        specifier: ^6.5.0
         version: 6.13.2(eslint@8.55.0)(typescript@5.2.2)
       clean-publish:
         specifier: ^4.2.0
@@ -326,7 +329,7 @@ importers:
         specifier: 10.3.0
         version: 10.3.0
       eslint:
-        specifier: ^8.55.0
+        specifier: ^8
         version: 8.55.0
       eslint-import-resolver-node:
         specifier: ^0.3.9
@@ -1154,6 +1157,12 @@ packages:
   /@next/env@14.0.1:
     resolution: {integrity: sha512-Ms8ZswqY65/YfcjrlcIwMPD7Rg/dVjdLapMcSHG26W6O67EJDF435ShW4H4LXi1xKO1oRc97tLXUpx8jpLe86A==}
     dev: false
+
+  /@next/eslint-plugin-next@14.0.4:
+    resolution: {integrity: sha512-U3qMNHmEZoVmHA0j/57nRfi3AscXNvkOnxDmle/69Jz/G0o/gWjXTDdlgILZdrxQ0Lw/jv2mPW8PGy0EGIHXhQ==}
+    dependencies:
+      glob: 7.1.7
+    dev: true
 
   /@next/swc-darwin-arm64@14.0.1:
     resolution: {integrity: sha512-JyxnGCS4qT67hdOKQ0CkgFTp+PXub5W1wsGvIq98TNbF3YEIN7iDekYhYsZzc8Ov0pWEsghQt+tANdidITCLaw==}
@@ -5258,6 +5267,17 @@ packages:
 
   /glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.1.2
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: true
+
+  /glob@7.1.7:
+    resolution: {integrity: sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==}
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6

@@ -25,6 +25,7 @@
   "extends": [
     "plugin:import/typescript",
     "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:@typescript-eslint/strict",
     "plugin:jsdoc/recommended-typescript-error",

@@ -1,6 +1,10 @@
 {
   "dependencies": [
     {
+      "name": "@next/eslint-plugin-next",
+      "type": "build"
+    },
+    {
       "name": "@stylistic/eslint-plugin",
       "type": "build"
     },
