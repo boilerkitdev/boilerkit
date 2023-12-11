@@ -22,7 +22,7 @@ This package relies on several peer dependencies to function correctly. You will
 
 * `constructs@^10.3.0`
 
-* `projen@^0.76.15`
+* `projen@^0.77.6`
 
 ## License
 
