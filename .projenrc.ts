@@ -95,6 +95,13 @@ new TypeScriptPackageProject({
 
 new TypeScriptPackageProject({
   parent: project,
+  name: "@boilerkit/core",
+  vitest: true,
+  release: true,
+})
+
+new TypeScriptPackageProject({
+  parent: project,
   name: "@boilerkit/tpl",
   vitest: true,
   release: true,
