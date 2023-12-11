@@ -17,6 +17,7 @@ const project = new TypeScriptWorkspaceProject({
   name: "boilerkit",
   minNodeVersion: "18.17.0",
   projenVersion: "0.77.6",
+  defaultReleaseBranch: "main",
   devDeps: [
     scopedProjen("projen-project-typescript"),
     scopedProjen("projen-pnpm-workspace"),
