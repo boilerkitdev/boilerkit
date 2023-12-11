@@ -7,7 +7,6 @@ import {
 } from "@scaleleap/projen-project-typescript"
 import { ProjenReactApp } from "@scaleleap/projen-react"
 import { TypeScriptModuleResolution } from "projen/lib/javascript"
-import { web } from "projen"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
 
@@ -73,7 +72,7 @@ docsApp.tasks.addTask("dev:docs", {
   exec: "next",
 })
 
-const reactApp = new ProjenReactApp(docsApp, {})
+new ProjenReactApp(docsApp, {})
 docsApp.tryRemoveFile("src/index.tsx")
 docsApp.tryRemoveFile("index.html")
 docsApp.tryRemoveFile("vite.config.ts")
@@ -82,7 +81,7 @@ docsApp.compileTask.spawn(buildDocs)
 docsApp.tsconfig?.file.addOverride("compilerOptions.jsx", "preserve")
 docsApp.gitignore.exclude(".next")
 
-const tplPackage = new TypeScriptPackageProject({
+new TypeScriptPackageProject({
   parent: project,
   name: "@boilerkit/tpl",
   vitest: true,
@@ -99,7 +98,7 @@ const cliPackage = new TypeScriptPackageProject({
 // also opened an issue to discuss this "feature": https://github.com/oclif/core/issues/851
 // cliPackage.package.addField("files", ["lib"])
 
-const oclif = new OclifCli(cliPackage, {
+new OclifCli(cliPackage, {
   executableName: "bk",
 })
 
