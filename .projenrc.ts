@@ -98,6 +98,7 @@ new TypeScriptPackageProject({
   name: "@boilerkit/core",
   vitest: true,
   release: true,
+  deps: ["@boilerkit/types"],
 })
 
 new TypeScriptPackageProject({
