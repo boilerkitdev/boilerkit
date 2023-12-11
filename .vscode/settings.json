@@ -12,7 +12,8 @@
     "*.tsbuildinfo": true,
     "apps/docs": true,
     "packages/cli": true,
-    "packages/tpl": true
+    "packages/tpl": true,
+    "packages/types": true
   },
   "search.exclude": {
     "node_modules": true,

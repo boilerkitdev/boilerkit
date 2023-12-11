@@ -4,6 +4,7 @@ declare module '@scaleleap/projen-project-typescript' {
   interface ProjenTypeScriptWorkspacePackages {
     "@boilerkit/cli": 1;
     "@boilerkit/tpl": 1;
+    "@boilerkit/types": 1;
     "docs": 1;
   }
 }

@@ -9,6 +9,10 @@
       "path": "packages/tpl"
     },
     {
+      "name": "@boilerkit/types",
+      "path": "packages/types"
+    },
+    {
       "name": "boilerkit 🌱",
       "path": "."
     },
