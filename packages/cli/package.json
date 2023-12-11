@@ -68,7 +68,7 @@
   "license": "UNLICENSED",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@8.12.0",
   "oclif": {
     "bin": "bk",
     "commands": "./lib/commands",
