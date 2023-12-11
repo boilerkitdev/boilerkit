@@ -34,6 +34,14 @@
       "is-ci",
       "node"
     ],
+    "paths": {
+      "@boilerkit/types": [
+        "../types/src/index.ts"
+      ],
+      "@boilerkit/types/*": [
+        "../types/src/*"
+      ]
+    },
     "incremental": true,
     "tsBuildInfoFile": "tsconfig.tsbuildinfo",
     "skipLibCheck": true
@@ -41,5 +49,10 @@
   "include": [
     "src/**/*.ts"
   ],
-  "exclude": []
+  "exclude": [],
+  "references": [
+    {
+      "path": "../types"
+    }
+  ]
 }
