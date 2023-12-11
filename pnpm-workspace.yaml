@@ -3,5 +3,6 @@
 packages:
   - apps/docs
   - packages/cli
+  - packages/core
   - packages/tpl
   - packages/types

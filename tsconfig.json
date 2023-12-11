@@ -42,6 +42,12 @@
       "@boilerkit/cli/*": [
         "./packages/cli/src/*"
       ],
+      "@boilerkit/core": [
+        "./packages/core/src/index.ts"
+      ],
+      "@boilerkit/core/*": [
+        "./packages/core/src/*"
+      ],
       "@boilerkit/tpl": [
         "./packages/tpl/src/index.ts"
       ],

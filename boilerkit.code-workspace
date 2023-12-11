@@ -5,6 +5,10 @@
       "path": "packages/cli"
     },
     {
+      "name": "@boilerkit/core",
+      "path": "packages/core"
+    },
+    {
       "name": "@boilerkit/tpl",
       "path": "packages/tpl"
     },
