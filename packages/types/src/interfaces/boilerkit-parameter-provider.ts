@@ -9,7 +9,9 @@ export interface IBoilerKitParameterProvider<
   /**
    * Returns parameters that are provided as inputs to actions.
    *
+   * @template P BoilerKit parameters
+   * @template O BoilerKit generator options
    * @param ctx BoilerKit context
    */
-  parameters(ctx: IBoilerKitContext<P, O>): Promise<P>
+  provide(ctx: IBoilerKitContext<P, O>): Promise<P>
 }
