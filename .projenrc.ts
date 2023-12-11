@@ -88,6 +88,13 @@ docsApp.addDevDeps("@next/eslint-plugin-next")
 
 new TypeScriptPackageProject({
   parent: project,
+  name: "@boilerkit/types",
+  vitest: true,
+  release: true,
+})
+
+new TypeScriptPackageProject({
+  parent: project,
   name: "@boilerkit/tpl",
   vitest: true,
   release: true,
