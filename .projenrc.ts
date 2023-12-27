@@ -1,11 +1,9 @@
 import { OclifCli } from "@scaleleap/projen-oclif"
 import { PnpmWorkspace } from "@scaleleap/projen-pnpm-workspace"
-import {
-  TypeScriptAppProject,
-  TypeScriptPackageProject,
-  TypeScriptWorkspaceProject,
-} from "@scaleleap/projen-project-typescript"
 import { ProjenReactApp } from "@scaleleap/projen-react"
+import { TypeScriptAppProject } from "@scaleleap/projen-typescript-app-project"
+import { TypeScriptLibProject } from "@scaleleap/projen-typescript-lib-project"
+import { TypeScriptWorkspaceProject } from "@scaleleap/projen-typescript-workspace-project"
 import { TypeScriptModuleResolution } from "projen/lib/javascript"
 
 const scoped = (name: string) => ["@scaleleap", name].join("/")
@@ -86,14 +84,14 @@ docsApp.gitignore.exclude(".next")
 docsApp.eslint?.addExtends("plugin:@next/next/recommended")
 docsApp.addDevDeps("@next/eslint-plugin-next")
 
-new TypeScriptPackageProject({
+new TypeScriptLibProject({
   parent: project,
   name: "@boilerkit/types",
   vitest: true,
   release: true,
 })
 
-new TypeScriptPackageProject({
+new TypeScriptLibProject({
   parent: project,
   name: "@boilerkit/core",
   vitest: true,
@@ -101,14 +99,14 @@ new TypeScriptPackageProject({
   deps: ["@boilerkit/types"],
 })
 
-new TypeScriptPackageProject({
+new TypeScriptLibProject({
   parent: project,
   name: "@boilerkit/tpl",
   vitest: true,
   release: true,
 })
 
-const cliPackage = new TypeScriptPackageProject({
+const cliPackage = new TypeScriptLibProject({
   parent: project,
   deps: ["@boilerkit/tpl"],
   name: "@boilerkit/cli",
