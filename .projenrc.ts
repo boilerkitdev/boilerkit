@@ -50,6 +50,7 @@ const docsApp = new TypeScriptAppProject({
   parent: project,
   name: "docs",
   deps: ["next", "nextra", "nextra-theme-docs"],
+  sampleCode: false,
   tsconfig: {
     compilerOptions: {
       // jsx: "preserve",
