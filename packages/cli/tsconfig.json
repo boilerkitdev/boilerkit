@@ -30,7 +30,6 @@
       "./types"
     ],
     "types": [
-      "is-ci",
       "node"
     ],
     "paths": {

@@ -18,10 +18,9 @@ tsconfig.tsbuildinfo
 .nvmrc
 .gitattributes
 types/**
+bin/dev.js
 CLI.template.md
-README.md.bak
-vitest.config.ts
-/tsconfig.build.json
 tsup.config.json
 package.json.original
+tmp/
 .lintstagedrc.yaml

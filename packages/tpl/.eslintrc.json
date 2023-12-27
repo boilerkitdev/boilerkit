@@ -150,7 +150,8 @@
           "**/*.test.tsx"
         ],
         "optionalDependencies": false,
-        "peerDependencies": true
+        "peerDependencies": true,
+        "includeTypes": false
       }
     ],
     "import/no-unresolved": [

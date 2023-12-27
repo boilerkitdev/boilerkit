@@ -46,9 +46,8 @@ jspm_packages/
 !/bin/dev.js
 !/src/index.ts
 !/CLI.template.md
-README.md.bak
-!/vitest.config.ts
 !/tsconfig.build.json
 !/tsup.config.json
 package.json.original
+tmp/
 !/.lintstagedrc.yaml

@@ -21,6 +21,10 @@
       "type": "build"
     },
     {
+      "name": "@scaleleap/projen-typescript-workspace-project",
+      "type": "build"
+    },
+    {
       "name": "@stylistic/eslint-plugin",
       "type": "build"
     },
@@ -58,10 +62,6 @@
     },
     {
       "name": "eslint-config-prettier",
-      "type": "build"
-    },
-    {
-      "name": "eslint-import-resolver-node",
       "type": "build"
     },
     {

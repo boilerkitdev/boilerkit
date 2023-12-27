@@ -89,19 +89,13 @@
       "description": "Generates a README.md file for the CLI.",
       "steps": [
         {
-          "exec": "shx mv README.md README.md.bak"
+          "exec": "shx cp -f CLI.template.md CLI.md"
         },
         {
-          "exec": "shx cp CLI.template.md README.md"
+          "exec": "shx chmod u+w CLI.md"
         },
         {
-          "exec": "oclif readme"
-        },
-        {
-          "exec": "shx mv README.md CLI.md"
-        },
-        {
-          "exec": "shx mv README.md.bak README.md"
+          "exec": "oclif readme --readme-path=CLI.md"
         }
       ]
     },
@@ -116,12 +110,7 @@
     },
     "post-compile": {
       "name": "post-compile",
-      "description": "Runs after successful compilation",
-      "steps": [
-        {
-          "spawn": "oclif:readme"
-        }
-      ]
+      "description": "Runs after successful compilation"
     },
     "postpack": {
       "name": "postpack",
@@ -152,21 +141,6 @@
       "steps": [
         {
           "spawn": "eslint"
-        },
-        {
-          "exec": "vitest run --config=\"vitest.config.ts\"",
-          "env": {
-            "VITE_CJS_IGNORE_WARNING": "true"
-          }
-        }
-      ]
-    },
-    "test:watch": {
-      "name": "test:watch",
-      "description": "Run Vitest in watch mode",
-      "steps": [
-        {
-          "exec": "vitest watch --config=\"vitest.config.ts\""
         }
       ]
     },
