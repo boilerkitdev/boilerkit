@@ -56,6 +56,7 @@ const docsApp = new TypeScriptAppProject({
       allowJs: true,
       moduleResolution: TypeScriptModuleResolution.NODE,
       isolatedModules: true,
+      lib: ["dom", "dom.iterable", "esnext"],
     },
   },
 })
