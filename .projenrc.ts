@@ -61,7 +61,7 @@ const docsApp = new TypeScriptAppProject({
 })
 
 const buildDocs = docsApp.tasks.addTask("build:docs", {
-  exec: "next build",
+  exec: "next build --no-lint",
 })
 
 docsApp.compileTask.spawn(buildDocs)
