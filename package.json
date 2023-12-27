@@ -24,9 +24,9 @@
     "projen": "projen"
   },
   "devDependencies": {
-    "@scaleleap/projen-oclif": "link:../projen/packages/projen-oclif",
-    "@scaleleap/projen-pnpm-workspace": "link:../projen/packages/projen-pnpm-workspace",
-    "@scaleleap/projen-react": "link:../projen/packages/projen-react",
+    "@scaleleap/projen-oclif": "^1.0.4",
+    "@scaleleap/projen-pnpm-workspace": "^1.0.3",
+    "@scaleleap/projen-react": "^0.0.3",
     "@scaleleap/projen-typescript-app-project": "^1.1.2",
     "@scaleleap/projen-typescript-lib-project": "^1.1.2",
     "@scaleleap/projen-typescript-workspace-project": "^1.1.2",

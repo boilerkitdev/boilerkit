@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@scaleleap/projen-oclif':
-        specifier: link:../projen/packages/projen-oclif
-        version: link:../projen/packages/projen-oclif
+        specifier: ^1.0.4
+        version: 1.0.4(constructs@10.3.0)(projen@0.77.6)
       '@scaleleap/projen-pnpm-workspace':
-        specifier: link:../projen/packages/projen-pnpm-workspace
-        version: link:../projen/packages/projen-pnpm-workspace
+        specifier: ^1.0.3
+        version: 1.0.3(constructs@10.3.0)(projen@0.77.6)
       '@scaleleap/projen-react':
-        specifier: link:../projen/packages/projen-react
-        version: link:../projen/packages/projen-react
+        specifier: ^0.0.3
+        version: 0.0.3(constructs@10.3.0)(projen@0.77.6)
       '@scaleleap/projen-typescript-app-project':
         specifier: ^1.1.2
         version: 1.1.2(constructs@10.3.0)(projen@0.77.6)
@@ -570,6 +570,33 @@ packages:
       projen: 0.77.6(constructs@10.3.0)
     dev: true
 
+  /@scaleleap/projen-oclif@1.0.4(constructs@10.3.0)(projen@0.77.6):
+    resolution: {integrity: sha512-KEiwwPZKkp5xHZvydvTi6QLLgUn5YtDPsET7WolPJrRjOa+FYlJ4+Ab20L+6u1qmzk0t2KuWaR2yC16B0OJOXA==}
+    engines: {node: '>= 18.17.0'}
+    peerDependencies:
+      constructs: ^10.3.0
+      projen: ^0.76.15
+    dependencies:
+      '@scaleleap/projen-markdown': 1.0.3(constructs@10.3.0)(projen@0.77.6)
+      '@scaleleap/projen-typescript-package-build': 1.0.3(constructs@10.3.0)(projen@0.77.6)
+      constructs: 10.3.0
+      projen: 0.77.6(constructs@10.3.0)
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@scaleleap/projen-pnpm-workspace@1.0.3(constructs@10.3.0)(projen@0.77.6):
+    resolution: {integrity: sha512-VKuTIusHwA7EmSx+q8xkigvwGhgT2RIHNXfQTOWkqU1iaDt+cGGQw+D9dPAg+n0Ch3+1unUedDq1DPoBhZkBuA==}
+    engines: {node: '>= 18.17.0'}
+    peerDependencies:
+      constructs: ^10.3.0
+      projen: ^0.76.15
+    dependencies:
+      '@scaleleap/projen-utils': 1.0.0(constructs@10.3.0)(projen@0.77.6)
+      constructs: 10.3.0
+      projen: 0.77.6(constructs@10.3.0)
+    dev: true
+
   /@scaleleap/projen-pnpm@1.0.2(constructs@10.3.0)(projen@0.77.6):
     resolution: {integrity: sha512-xh66PLPOCqfv2LPoSy/0/gaUn6a3unZUWNFo5kG3X0HiM18pwAXPdfEeK5RaqNgjEvKsRjHyWUf8V06tfTwMWQ==}
     engines: {node: '>= 18.12.1'}
@@ -578,6 +605,19 @@ packages:
       projen: ^0.76.15
     dependencies:
       '@scaleleap/facts': 0.0.2(constructs@10.3.0)(projen@0.77.6)
+      constructs: 10.3.0
+      projen: 0.77.6(constructs@10.3.0)
+    dev: true
+
+  /@scaleleap/projen-react@0.0.3(constructs@10.3.0)(projen@0.77.6):
+    resolution: {integrity: sha512-Xvnur3lC9b5or8AoWqPu/QOMwyep5MBIoCFunImisdQyNSqNIBdXnrHzj1IfDum4rQLRswLrel28EtGoKGfpEQ==}
+    engines: {node: '>= 18.17.0'}
+    peerDependencies:
+      constructs: ^10.3.0
+      projen: ^0.76.15
+    dependencies:
+      '@scaleleap/projen-eslint-config': 1.0.3(constructs@10.3.0)(projen@0.77.6)
+      '@scaleleap/projen-vite': 0.0.3(constructs@10.3.0)(projen@0.77.6)
       constructs: 10.3.0
       projen: 0.77.6(constructs@10.3.0)
     dev: true
@@ -631,6 +671,18 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@scaleleap/projen-typescript-file@0.0.2(constructs@10.3.0)(projen@0.77.6):
+    resolution: {integrity: sha512-dpb15E7cb3VwW6BT/qqhcIjqZP10t0ojUo2/q6nlhPS/aztidW8ZJlXF98jo5foRxUl/GjCwxAB53Qrw1v0EfA==}
+    engines: {node: '>= 18.12.1'}
+    peerDependencies:
+      constructs: ^10.3.0
+      projen: ^0.76.15
+    dependencies:
+      constructs: 10.3.0
+      projen: 0.77.6(constructs@10.3.0)
+      ts-morph: 21.0.1
     dev: true
 
   /@scaleleap/projen-typescript-lib-project@1.1.2(constructs@10.3.0)(projen@0.77.6):
@@ -725,6 +777,21 @@ packages:
       projen: 0.77.6(constructs@10.3.0)
     dev: true
 
+  /@scaleleap/projen-vite@0.0.3(constructs@10.3.0)(projen@0.77.6):
+    resolution: {integrity: sha512-Vc93qDdnmGsz0Yougn563cszvW2JF9SC+mhzecTu+rEY5ob0avDzypDIvK5VcDUUWlzX92a4ZrHMnA/uDIwh2g==}
+    engines: {node: '>= 18.17.0'}
+    peerDependencies:
+      constructs: ^10.3.0
+      projen: ^0.76.15
+    dependencies:
+      '@scaleleap/projen-typescript-file': 0.0.2(constructs@10.3.0)(projen@0.77.6)
+      '@scaleleap/projen-utils': 1.0.0(constructs@10.3.0)(projen@0.77.6)
+      '@zerodep/is-object': 2.0.4
+      '@zerodep/is-pojo': 2.0.4
+      constructs: 10.3.0
+      projen: 0.77.6(constructs@10.3.0)
+    dev: true
+
   /@scaleleap/projen-vitest@1.0.2(constructs@10.3.0)(projen@0.77.6):
     resolution: {integrity: sha512-nbmBJ/OMCFPvfdSN7GDg8cMyqJLegHto+W0hKSA0buubb8Y88ON/5LDU0Zzzrx4an+YxE4WSQGCsWWagkdiUTw==}
     engines: {node: '>= 18.12.1'}
@@ -813,6 +880,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: true
+
+  /@ts-morph/common@0.22.0:
+    resolution: {integrity: sha512-HqNBuV/oIlMKdkLshXd1zKBqNQCsuPEsgQOkfFQ/eUKjRlwndXW1AjN9LVkBEIukm00gGXSRmfkl0Wv5VXLnlw==}
+    dependencies:
+      fast-glob: 3.3.2
+      minimatch: 9.0.3
+      mkdirp: 3.0.1
+      path-browserify: 1.0.1
     dev: true
 
   /@types/debug@4.1.10:
@@ -1025,6 +1101,14 @@ packages:
 
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+    dev: true
+
+  /@zerodep/is-object@2.0.4:
+    resolution: {integrity: sha512-24tfP6D1o4tezy9VlDR/PqzEpvS5+3GrKsOgsfQsZHgkBc8nQDPXc+ar0Np9eb1pSkneEF3OuHClfxJRPqGkrQ==}
+    dev: true
+
+  /@zerodep/is-pojo@2.0.4:
+    resolution: {integrity: sha512-J5YZhlLDeGz7EMQtdpYydX2oyMyXdOwLzZk2c/nJLA1ONy5daqKyr0hYkRMTM4swuWvUlJm0MqhvNDK1KAkhCw==}
     dev: true
 
   /acorn-jsx@5.3.2(acorn@8.11.2):
@@ -1351,6 +1435,10 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+    dev: true
+
+  /code-block-writer@12.0.0:
+    resolution: {integrity: sha512-q4dMFMlXtKR3XNBHyMHt/3pwYNA69EDk00lloMOaaUMKPUXBw6lpXtbu3MMVG6/uOihGnRDOlkyqsONEUj60+w==}
     dev: true
 
   /color-convert@1.9.3:
@@ -2066,6 +2154,17 @@ packages:
 
   /fast-glob@3.3.1:
     resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: true
+
+  /fast-glob@3.3.2:
+    resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
     engines: {node: '>=8.6.0'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -3207,6 +3306,12 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dev: true
 
+  /mkdirp@3.0.1:
+    resolution: {integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: true
+
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
@@ -3410,6 +3515,10 @@ packages:
     dependencies:
       no-case: 3.0.4
       tslib: 2.6.2
+    dev: true
+
+  /path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: true
 
   /path-case@3.0.4:
@@ -4011,6 +4120,13 @@ packages:
       typescript: '>=4.2.0'
     dependencies:
       typescript: 5.2.2
+    dev: true
+
+  /ts-morph@21.0.1:
+    resolution: {integrity: sha512-dbDtVdEAncKctzrVZ+Nr7kHpHkv+0JDJb2MjjpBaj8bFeCkePU9rHfMklmhuLFnpeq/EJZk2IhStY6NzqgjOkg==}
+    dependencies:
+      '@ts-morph/common': 0.22.0
+      code-block-writer: 12.0.0
     dev: true
 
   /tsconfig-paths@3.14.2:
