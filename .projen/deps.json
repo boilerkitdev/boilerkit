@@ -2,22 +2,22 @@
   "dependencies": [
     {
       "name": "@scaleleap/projen-oclif",
-      "version": "link:../projen/packages/projen-oclif",
       "type": "build"
     },
     {
       "name": "@scaleleap/projen-pnpm-workspace",
-      "version": "link:../projen/packages/projen-pnpm-workspace",
-      "type": "build"
-    },
-    {
-      "name": "@scaleleap/projen-project-typescript",
-      "version": "link:../projen/packages/projen-project-typescript",
       "type": "build"
     },
     {
       "name": "@scaleleap/projen-react",
-      "version": "link:../projen/packages/projen-react",
+      "type": "build"
+    },
+    {
+      "name": "@scaleleap/projen-typescript-app-project",
+      "type": "build"
+    },
+    {
+      "name": "@scaleleap/projen-typescript-lib-project",
       "type": "build"
     },
     {

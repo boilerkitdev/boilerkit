@@ -26,9 +26,10 @@
   "devDependencies": {
     "@scaleleap/projen-oclif": "link:../projen/packages/projen-oclif",
     "@scaleleap/projen-pnpm-workspace": "link:../projen/packages/projen-pnpm-workspace",
-    "@scaleleap/projen-project-typescript": "link:../projen/packages/projen-project-typescript",
     "@scaleleap/projen-react": "link:../projen/packages/projen-react",
-    "@scaleleap/projen-typescript-workspace-project": "*",
+    "@scaleleap/projen-typescript-app-project": "^1.1.2",
+    "@scaleleap/projen-typescript-lib-project": "^1.1.2",
+    "@scaleleap/projen-typescript-workspace-project": "^1.1.2",
     "@stylistic/eslint-plugin": "^1.5.1",
     "@types/eslint-config-prettier": "^6.11.2",
     "@types/eslint-plugin-prettier": "^3.1.2",

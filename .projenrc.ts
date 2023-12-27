@@ -6,11 +6,6 @@ import { TypeScriptLibProject } from "@scaleleap/projen-typescript-lib-project"
 import { TypeScriptWorkspaceProject } from "@scaleleap/projen-typescript-workspace-project"
 import { TypeScriptModuleResolution } from "projen/lib/javascript"
 
-const scoped = (name: string) => ["@scaleleap", name].join("/")
-
-const scopedProjen = (name: string) =>
-  [scoped(name), `link:../projen/packages/${name}`].join("@")
-
 const project = new TypeScriptWorkspaceProject({
   name: "boilerkit",
   minNodeVersion: "18.17.0",
@@ -18,10 +13,12 @@ const project = new TypeScriptWorkspaceProject({
   pnpmVersion: "8.12.0",
   defaultReleaseBranch: "main",
   devDeps: [
-    scopedProjen("projen-project-typescript"),
-    scopedProjen("projen-pnpm-workspace"),
-    scopedProjen("projen-react"),
-    scopedProjen("projen-oclif"),
+    "@scaleleap/projen-oclif",
+    "@scaleleap/projen-pnpm-workspace",
+    "@scaleleap/projen-react",
+    "@scaleleap/projen-typescript-app-project",
+    "@scaleleap/projen-typescript-lib-project",
+    "@scaleleap/projen-typescript-workspace-project",
   ],
   prettier: true,
   prettierOptions: {
