@@ -32,6 +32,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsdoc": "^46.9.0",
     "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-oclif": "^0.1.0",
     "eslint-plugin-regexp": "^2.1.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-unicorn": "^49.0.0",

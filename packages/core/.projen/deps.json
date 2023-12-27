@@ -118,6 +118,7 @@
     },
     {
       "name": "@boilerkit/types",
+      "version": "workspace:*",
       "type": "runtime"
     }
   ],

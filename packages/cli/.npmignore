@@ -20,6 +20,7 @@ tsconfig.tsbuildinfo
 types/**
 bin/dev.js
 CLI.template.md
+/tsconfig.build.json
 tsup.config.json
 package.json.original
 tmp/

@@ -19,6 +19,7 @@
     ".vscode/extensions.json",
     ".vscode/settings.json",
     "boilerkit.code-workspace",
+    "pnpm-workspace.yaml",
     "README.md",
     "tsconfig.json",
     "types/README.md",
